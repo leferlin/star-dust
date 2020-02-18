@@ -1,0 +1,41 @@
+{
+  "name": "heroku-build-bypass",
+  "version": "1.0.0",
+  "description": "heroku, test",
+  "main": "index.js",
+  "scripts": {
+      "start": "cd game && npm start",
+      "postinstall": "cd game && npm install",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "local": "cd game && npm run local",
+      "buildDev": "cd game && npm run buildDev",
+      "build": "cd game && npm run buildDev",
+      "localTest": "cd game && npm run localTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.ic.unicamp.br/mc437/2019-s/group-00.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+      "node": "10.16"
+  },
+  "dependencies": {
+      "@babel/core": "^7.3.4",
+      "@babel/plugin-proposal-class-properties": "^7.3.4",
+      "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+      "@babel/preset-env": "^7.3.4",
+      "babel-loader": "^8.0.5",
+      "clean-webpack-plugin": "^2.0.2",
+      "copy-webpack-plugin": "^5.0.0",
+      "html-webpack-plugin": "^3.2.0",
+      "typescript": "^3.3.3333",
+      "webpack": "^4.29.6",
+      "webpack-cli": "^3.2.3",
+      "webpack-dev-server": "^3.2.1",
+      "webpack-merge": "^4.2.1",
+      "webpack-obfuscator": "^0.18.0",
+      "workbox-webpack-plugin": "^4.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+**/node_modules
+.DS_Store
+# VSCode Docs
+.vscode
+typings
+jsconfig.json
+# Webpack package
+**/dist
+# Gedit backup files
+*~

@@ -1,0 +1,30 @@
+const players = {};
+const asteroids = {};
+const sockets = [];
+// Map additions
+const MAP_SIZE_X = 1000;
+const MAP_SIZE_Y = 1000;
+
+// Game constants
+const WHEIGHT = 700;
+const WWIDTH = 500;
+
+// Player constants
+const MAXFUEL = 200;
+const FUELCOST = 1;
+const FUELGAIN = 0.25;
+
+const FUELPOWERUP = .5 * MAXFUEL;
+
+const MAXHP = 10;
+const HPDAMAGECOLLISION = 5;
+const HPPOWERUP = 30;
+const DEATHTHRESHOLD = 0;
+
+const MAXSPEED = 100;
+
+// Asteriods constants
+const ASTEROIDNUM = 5;
+const MAXHP_AST = 30;
+const HPDAMAGECOLLISION_AST = 2;
+const MIN_SIZE_AST = 0.25;

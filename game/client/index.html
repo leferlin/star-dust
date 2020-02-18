@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Webpack HTML variables -->
+    <meta name="application-name" content="<%= htmlWebpackPlugin.options.gameName %>" />
+    <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.gameName %>" />
+    <meta name="msapplication-starturl" content="./" />
+
+    <!-- PWA icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icons-192.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./icons/icons-192.png" />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="./icons/icons-512.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./icons/icons-512.png" />
+
+    <!-- TODO: ADD FAVICON -->
+    <!-- <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" /> -->
+
+    <noscript>Please enable javascript to continue using this application.</noscript>
+
+    <!-- installs the serviceWorker -->
+    <!-- <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('./sw.js')
+            })
+          }
+        </script> -->
+
+    <!-- Get name from Webpack -->
+    <title><%= htmlWebpackPlugin.options.gameName %></title>
+    <style>
+        html,
+        body {
+            margin: 0px;
+            height: 100%;
+            /* Prevent scrollbars from showing */
+            background-color: black;
+        }
+    </style>
+
+    <!-- Socket.io reference created in index.js with socket.io itself -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- check if needed -->
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.17.0/dist/phaser.min.js"></script>
+</head>
+
+<body>
+    <!-- Config in game.js config variable -->
+    <div id="phaser-game"></div>
+</body>
+
+</html>
